@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator html</title>
+<style>
+#calc{
+  border: 10px solid black;
+  height: 75vh;
+  width: 25%;
+  background-color: rgb(244, 237, 237);
+  border: 2px solid black;
+  border-radius: 10px;
+  margin-left: 350px;
+}
+#ins{
+  border: 1px solid black;
+  margin-top: 15px;
+  margin-left: 5px;
+  margin-right: 5px;
+  height: 10vh;
+  background-color: white;
+  border: none;
+}
+input{
+  border: none;
+  height: 10vh;
+  width: 238px;
+}
+
+.butt{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-left: 25px;  
+  margin-right: 25px;
+}
+
+.butt2{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-left: 25px;  
+  margin-right: 25px;
+  
+}
+
+.butt3{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-left: 25px;  
+  margin-right: 25px;
+}
+
+.butt4{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-left: 25px;  
+  margin-right: 25px;
+}
+
+.butt5{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-left: 25px;  
+  margin-right: 25px;
+}
+
+.butt5 #zero{
+  height: 50px;
+  width: 110px;
+  border-radius: 50px;
+
+}
+
+button{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgb(220, 211, 193);
+}
+
+button:hover{
+  cursor: pointer;
+  background-color: beige;
+}
+
+#right{
+  background-color: rgb(189, 154, 154);
+}
+
+@media screen and (max-width:1100px){
+  #calc{
+    margin-left: 250px;
+  }
+  
+}
+
+@media screen and (max-width:900px){
+  #calc{
+    margin-left: 230px;
+  }
+  
+}
+
+@media screen and (max-width:){
+  
+}
+
+
+
+</style>
+
+
+
+</head>
+
+
+
+<body>
+  
+
+  <div id="calc">
+
+    <div id="ins">
+      <input type="numbers" value="" id="myId">
+    </div>
+
+    <!-- <script>
+      document.getElementById("myId").value ="1";
+    </script> -->
+
+
+  
+
+    <div class="butt">
+      <div>
+        <button onclick="allclear()">AC</button>
+      </div>
+      <script>
+        function allclear(){
+          document.getElementById("myId").value =""
+        }
+      </script>
+
+      <div>
+        <button onclick="pm()">+/-</button>
+      </div>
+      <script>
+        function pm(){
+          document.getElementById("myId").value +="+/-"
+        }
+      </script>
+
+      <div>
+        <button onclick="per()">%</button>
+      </div>
+      <script>
+        function per(){
+          document.getElementById("myId").value +="%"
+        }
+      </script>
+
+
+      <div>
+        <button id="right" onclick="slash()">/</button>
+      </div>
+      <script>
+        function slash(){
+          document.getElementById("myId").value +="/"
+        }
+      </script>
+    </div>
+
+    <div class="butt2">
+      <div>
+        <button onclick="seven()">7</button>
+      </div>
+      <script>
+        function seven(){
+          document.getElementById("myId").value +="7"
+        }
+      </script>
+
+      <div>
+        <button onclick="eight()">8</button>
+      </div>
+      <script>
+        function eight(){
+          document.getElementById("myId").value +="8"
+        }
+      </script>
+
+      <div>
+        <button onclick="nine()">9</button>
+      </div>
+      <script>
+        function nine(){
+          document.getElementById("myId").value +="9"
+        }
+      </script>
+
+      <div>
+        <button id="right" onclick="times()">x</button>
+      </div>
+      <script>
+        function times(){
+          document.getElementById("myId").value +="x"
+        }
+      </script>
+  </div>
+
+  <div class="butt3">
+    <div>
+      <button onclick="four()">4</button>
+    </div>
+    <script>
+      function four(){
+        document.getElementById("myId").value +="4"
+      }
+    </script>
+
+    <div>
+      <button onclick="five()">5</button>
+    </div>
+    <script>
+      function five(){
+        document.getElementById("myId").value +="5"
+      }
+    </script>
+
+    <div>
+      <button onclick="six()">6</button>
+    </div>
+    <script>
+      function six(){
+        document.getElementById("myId").value +="6"
+      }
+    </script>
+
+
+    <div>
+      <button id="right" onclick="minus()">-</button>
+    </div>
+    <script>
+      function minus(){
+        document.getElementById("myId").value +="-"
+      }
+    </script>
+
+  </div>
+
+  <div class="butt4">
+    <div>
+      <button onclick="myFunction()">1</button>
+    </div>
+    <script>
+      function myFunction(){
+        document.getElementById("myId").value +="1";
+      }
+    </script>
+    <div>
+      <button onclick="two()">2</button>
+    </div>
+    <script>
+      function two(){
+        document.getElementById("myId").value +="2"
+      }
+    </script>
+    <div>
+      <button onclick="three()">3</button>
+    </div>
+    <script>
+      function three(){
+        document.getElementById("myId").value +="3"
+      }
+    </script>
+    <div>
+      <button id="right" onclick="plus()">+</button>
+    </div>
+    <script>
+      function plus(){
+        document.getElementById("myId").value +="+"
+      }
+    </script>
+
+  </div>
+
+  <div class="butt5">
+    <div>
+      <button id="zero" onclick="zero()">0</button>
+    </div>
+    <script>
+      function zero(){
+        document.getElementById("myId").value +="0"
+      }
+    </script>
+
+    <div>
+      <button onclick="period()">.</button>
+    </div>
+    <script>
+      function period(){
+        document.getElementById("myId").value ="."
+      }
+    </script>
+
+    <div>
+      <button id="right" onclick="equals()">=</button>
+    </div>
+    <script>
+      function equals(){
+        document.getElementById("myId").value =""
+      }
+    </script>
+
+  </div>
+
+  </div>
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+</body>
+</html>
